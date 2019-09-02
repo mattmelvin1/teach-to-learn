@@ -10,7 +10,7 @@ class TeachToLiveNavbar extends React.Component{
                 <Navbar>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#home">React-Bootstrap</a>
+                            <a href="#home">Teach to Learn</a>
                         </Navbar.Brand>
                     </Navbar.Header>
                     <Nav>
