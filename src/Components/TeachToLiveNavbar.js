@@ -8,19 +8,8 @@ class TeachToLiveNavbar extends React.Component{
         return (
           <div>
                 <Navbar>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <a href="#home">Teach to Learn</a>
-                        </Navbar.Brand>
-                    </Navbar.Header>
                     <Nav>
-                        <NavItem eventKey={1} href="#">
-                            Link
-                        </NavItem>
-                        <NavItem eventKey={2} href="#">
-                            Link
-                        </NavItem>
-                        <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+                        <NavDropdown eventKey={3} title="Teach to Learn" id="basic-nav-dropdown">
                             <MenuItem eventKey={3.1}>Action</MenuItem>
                             <MenuItem eventKey={3.2}>Another action</MenuItem>
                             <MenuItem eventKey={3.3}>Something else here</MenuItem>
