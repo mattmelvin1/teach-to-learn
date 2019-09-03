@@ -27,22 +27,17 @@ class App extends React.Component {
         this.setState({
             showTeacherButton: !this.state.showTeacherButton
         })
-        this.setState({
-            showStudentButton: !this.state.showStudentButton
-        })
     }
 
     _onClickTeacherButton() {
         this
             .props
             .history
-            .push('/login')
+            .push('/teacherLogin')
         this.setState({
             showTeacherButton: !this.state.showTeacherButton
         })
-        this.setState({
-            showStudentButton: !this.state.showStudentButton
-        })
+    
     }
 
     render() {
