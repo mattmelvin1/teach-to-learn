@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button} from "react-bootstrap";
+import {withRouter} from "react-router-dom"
 import TeachToLiveNavbar from "./Components/TeachToLiveNavbar";
 
 
@@ -11,7 +12,6 @@ import "./Styles/HomepageButton.css";
 class App extends React.Component {
     constructor(props, context) {
         super(props, context);
-        // Store.configureStore()
         this.state = {
             showStudentButton: true,
             showTeacherButton: true
@@ -78,4 +78,4 @@ class App extends React.Component {
 
     }
 }
-export default App;
+export default withRouter(App);

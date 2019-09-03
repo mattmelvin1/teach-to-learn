@@ -1,6 +1,14 @@
-.ClassButtonSizing {
+
+.HomepageButton {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 400px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+
+}
+.ButtonSizing {
+    margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 30px;
+
 }
