@@ -15,6 +15,7 @@ import TeacherLogin from "./Components/InstructorLogin";
 import StudentTrends from "./Components/StudentTrends";
 
 export default({childProps}) => <Switch>
+    <AppliedRoute path="/"              exact component={Home}          props={childProps}/>
     <AppliedRoute path="/home"          exact component={Home}          props={childProps}/>
     <AppliedRoute path="/quiz"          exact component={Quiz}          props={childProps}/>
     <AppliedRoute path="/class"         exact component={Class}         props={childProps}/>
