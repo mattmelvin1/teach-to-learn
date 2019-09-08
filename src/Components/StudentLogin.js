@@ -1,5 +1,8 @@
 import React from "react";
 import { Button, Form, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import "../Styles/Login.css";
+
+
 export default class StudentLogin extends React.Component {
     
     render() {
@@ -8,7 +11,7 @@ export default class StudentLogin extends React.Component {
         return (
         
         <div>
-            <div>
+            <div className="Login">
                 <Form>
                     <FormGroup controlId="formBasicEmail">
                         <ControlLabel>Email</ControlLabel>

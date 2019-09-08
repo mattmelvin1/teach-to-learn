@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap";
-
-export default class InstuctorLogin extends Component {
+import "../Styles/Login.css";
+export default class TeacherLogin extends Component {
     constructor(props) {
         super(props);
 
