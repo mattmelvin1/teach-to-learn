@@ -1,4 +1,5 @@
 import React from 'react';
+import Routes from "./Routes";
 import {Button} from "react-bootstrap";
 import {withRouter} from "react-router-dom"
 import TeachToLiveNavbar from "./Components/TeachToLiveNavbar";
@@ -27,6 +28,9 @@ class App extends React.Component {
         this.setState({
             showTeacherButton: !this.state.showTeacherButton
         })
+        this.setState({
+            showStudentButton: !this.state.showStudentButton
+        })
     }
 
     _onClickTeacherButton() {
@@ -37,14 +41,18 @@ class App extends React.Component {
         this.setState({
             showTeacherButton: !this.state.showTeacherButton
         })
+        this.setState({
+            showStudentButton: !this.state.showStudentButton
+        })
     
     }
 
     render() {
         return (
             <div>
+                
                 <TeachToLiveNavbar/>
-
+                <Routes/>
                 <div className="HomepageButton">
                     {this.state.showStudentButton && <Button
                         className="ButtonSizing"

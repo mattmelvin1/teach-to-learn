@@ -1,6 +1,5 @@
 import React from "react";
 import {Button} from "react-bootstrap";
-import Home from "./Home";
 
 export default class Classes extends React.Component {
     constructor(props) {
@@ -26,7 +25,6 @@ export default class Classes extends React.Component {
         return (
 
             <div>
-                <Home/>
                 <div className="ClassButton">
                     <Button
                         className="ButtonSizing"
