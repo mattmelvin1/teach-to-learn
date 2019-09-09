@@ -5,7 +5,7 @@ const data = [
     {
         id: '1',
         firstname: 'Layla',
-        lastname: 'Grundy'
+        lastname: 'Melvin'
     }, {
         id: '2',
         firstname: 'Vicki',
