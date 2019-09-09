@@ -1,5 +1,5 @@
 import React from "react";
-import {Button} from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 export default class Quiz extends React.Component {
 
@@ -28,22 +28,19 @@ export default class Quiz extends React.Component {
     }
     render() {
         return (
-            <div className="Class">
-                <div className="lander">
-                    <h1>1st Period</h1>
-                    <p>Lets get teaching!</p>
-                </div>
-                <div className="ClassButton">
+            <div>
+
+                <div className="ReusableButton">
                     <Button
-                        className="ButtonSizing"
                         variant="primary"
                         size="lg"
                         block
                         onClick={this.handleClassSubmit}>
                         See class results
                     </Button>
+                </div>
+                <div className="ReusableButton">
                     <Button
-                        className="ButtonSizing"
                         variant="primary"
                         size="lg"
                         block

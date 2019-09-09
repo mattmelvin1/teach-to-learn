@@ -1,5 +1,7 @@
-import React, {Component} from "react";
-import {Button, FormGroup, FormControl, ControlLabel} from "react-bootstrap";
+import React, { Component } from "react";
+import { Button, ButtonToolbar, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import Home from "./Home";
+
 import "../Styles/Login.css";
 export default class TeacherLogin extends Component {
     constructor(props) {
@@ -23,7 +25,7 @@ export default class TeacherLogin extends Component {
         });
     }
 
-    handleSubmit = event => {
+    _handleLogin = event => {
         event.preventDefault();
         this
             .props
@@ -31,12 +33,22 @@ export default class TeacherLogin extends Component {
             .push('/classes')
 
     }
+    _handleSignUp = event => {
+        event.preventDefault();
+        this
+            .props
+            .history
+            .push('/')
+
+    }
+
 
     render() {
         return (
             <div>
-                <div className="Login">
-                    <form onSubmit={this.handleSubmit}>
+                <Home />                
+                <div className="LoginForm">
+                    <form >
                         <FormGroup controlId="email" bsSize="large">
                             <ControlLabel>Email</ControlLabel>
                             <FormControl
@@ -44,7 +56,7 @@ export default class TeacherLogin extends Component {
                                 type="email"
                                 placeholder="Enter email"
                                 value={this.state.email}
-                                onChange={this.handleChange}/>
+                                onChange={this.handleChange} />
                         </FormGroup>
                         <FormGroup controlId="password" bsSize="large">
                             <ControlLabel>Password</ControlLabel>
@@ -52,11 +64,27 @@ export default class TeacherLogin extends Component {
                                 placeholder="Enter password"
                                 value={this.state.password}
                                 onChange={this.handleChange}
-                                type="password"/>
+                                type="password" />
                         </FormGroup>
-                        <Button block bsSize="large" disabled={!this.validateForm()} type="submit">
-                            Login
-                        </Button>
+
+                        <ButtonToolbar className="pull-right">
+                            <Button
+                                variant="primary"
+                                size="lg"
+                                onClick={this
+                                    ._handleLogin
+                                    .bind(this)}
+                                type="button">Login
+                            </Button>
+                            <Button
+                                variant="primary"
+                                size="lg"
+                                onClick={this
+                                    ._handleSignUp
+                                    .bind(this)}
+                                type="button">Sign Up
+                            </Button>
+                        </ButtonToolbar>                   
                     </form>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
-import {Button} from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import "../Styles/ReusableButton.css";
 
 
 export default class Class extends React.Component {
@@ -28,28 +29,23 @@ export default class Class extends React.Component {
     render() {
         return (
 
-            <div className="Class">
-                <div className="lander">
-                    <h1>1st Period</h1>
-                    <p>Lets get teaching!</p>
-                </div>
-
-                <div className="ClassButton">
+            <div >
+                <div className="ReusableButton">
                     <Button
-                        className="ButtonSizing"
                         variant="primary"
                         size="lg"
                         block
                         onClick={this.handleStudentSubmit}>
-                        Manage or add students
+                        Manage students
                     </Button>
+                </div>
+                <div className="ReusableButton">
                     <Button
-                        className="ButtonSizing"
                         variant="primary"
                         size="lg"
                         block
                         onClick={this.handleQuizSubmit}>
-                        Manage or add quizzes
+                        Manage quizzes
                     </Button>
                 </div>
             </div>

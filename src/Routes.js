@@ -22,7 +22,7 @@ export default({childProps}) => <Switch>
     <AppliedRoute path="/classes"       exact component={Classes}       props={childProps}/>
     <AppliedRoute path="/quizzes"       exact component={Quizzes}       props={childProps}/>
     <AppliedRoute path="/students"      exact component={Students}      props={childProps}/>
-    <AppliedRoute path="/teacherLogin"  exact component={TeacherLogin}  props={childProps}/>
+    <AppliedRoute path="/instructorLogin"  exact component={TeacherLogin}  props={childProps}/>
     <AppliedRoute path="/classtrends"   exact component={ClassTrends}   props={childProps}/>
     <AppliedRoute path="/studentlogin"  exact component={StudentLogin}  props={childProps}/>
     <AppliedRoute path="/studenttrends" exact component={StudentTrends} props={childProps}/>

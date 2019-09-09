@@ -12,9 +12,7 @@ class TeachToLiveNavbar extends Component {
                         <NavDropdown eventKey={3} title="Teach to Learn" id="basic-nav-dropdown" pullRight>
                             <MenuItem eventKey={3.1} href="/home">Home</MenuItem>
                             <MenuItem divider />
-                            <MenuItem eventKey={3.2} href="/login">Login</MenuItem>
-                            <MenuItem divider />
-                            <MenuItem eventKey={3.3} href="/home">Logout</MenuItem>
+                            <MenuItem eventKey={3.2} href="/home">Logout</MenuItem>
                             <MenuItem divider />
                             <MenuItem eventKey={3.3} href="/home">Help</MenuItem>
                         </NavDropdown>

@@ -1,13 +1,14 @@
 import React from "react";
-import {Button} from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import "../Styles/ReusableButton.css";
 
 export default class Classes extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            showStudentButton: true,
-            showTeacherButton: true
+            showStudentButton: false,
+            showTeacherButton: false
         };
     }
 
@@ -21,13 +22,11 @@ export default class Classes extends React.Component {
 
     }
     render() {
-        console.log("classes state: " + this.state)
         return (
 
             <div>
-                <div className="ClassButton">
+                <div className="ReusableButton">
                     <Button
-                        className="ButtonSizing"
                         variant="primary"
                         size="lg"
                         block
@@ -36,9 +35,8 @@ export default class Classes extends React.Component {
                     </Button>
 
                 </div>
-                <div className="ClassButton">
+                <div className="ReusableButton">
                     <Button
-                        className="ButtonSizing"
                         variant="primary"
                         size="lg"
                         block

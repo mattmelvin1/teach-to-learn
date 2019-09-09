@@ -1,5 +1,6 @@
 import React from "react";
 import {Button} from "react-bootstrap";
+import "../Styles/Button.css";
 
 export default class ClassButton extends React.Component {
     constructor(props) {
@@ -9,13 +10,8 @@ export default class ClassButton extends React.Component {
 
 render() {
     return (
-
-        <div className="ClassButton">
+        <div className="Button">
             <Button
-                className="ClassButtonSizing"
-                variant="primary"
-                size="lg"
-                block
                 onClick={this.props.onClick}
                 href={this.props.href}>
                 2nd Period
