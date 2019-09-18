@@ -6,7 +6,7 @@ import TeachToLiveNavbar from "./Components/TeachToLiveNavbar";
 
 
 import './App.css';
-import "./Styles/ReusableButton.css";
+import "./Styles/Button.css";
 
 
 

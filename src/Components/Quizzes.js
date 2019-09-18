@@ -1,5 +1,6 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, ButtonToolbar } from "react-bootstrap";
+import "../Styles/Button.css";
 
 export default class Quizzes extends React.Component {
 
@@ -26,6 +27,24 @@ export default class Quizzes extends React.Component {
             .push('/quiz')
 
     }
+
+
+    _handleCreateQuiz = event => {
+        event.preventDefault();
+        this
+            .props
+            .history
+            .push('/quizzes')
+
+    }
+    _handleDeleteQuiz = event => {
+        event.preventDefault();
+        this
+            .props
+            .history
+            .push('/quizzes')
+
+    }
     render() {
         return (
             <div>
@@ -47,6 +66,25 @@ export default class Quizzes extends React.Component {
                         Quiz 2
                     </Button>
                 </div>
+
+                <ButtonToolbar className="AdditionalOptionButton">
+                            <Button
+                                variant="primary"
+                                size="lg"
+                                onClick={this
+                                    ._handleCreateQuiz
+                                    .bind(this)}
+                                type="button">Create a quiz
+                            </Button>
+                            <Button
+                                variant="primary"
+                                size="lg"
+                                onClick={this
+                                    ._handleDeleteQuiz
+                                    .bind(this)}
+                                type="button">Delete a quiz
+                            </Button>
+                </ButtonToolbar> 
             </div>
 
         )

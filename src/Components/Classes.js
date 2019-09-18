@@ -1,6 +1,7 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import "../Styles/ReusableButton.css";
+import { Button, ButtonToolbar } from "react-bootstrap";
+import "../Styles/Button.css";
+
 
 export default class Classes extends React.Component {
     constructor(props) {
@@ -12,15 +13,34 @@ export default class Classes extends React.Component {
         };
     }
 
-    handleSubmit = event => {
+    _handleSubmit = event => {
         console.log("handle submit");
         event.preventDefault();
         this
             .props
             .history
-            .push('/class')
+            .push('/class-administration')
 
     }
+
+    _handleAddClass = event => {
+        event.preventDefault();
+        this
+            .props
+            .history
+            .push('/classes')
+
+    }
+
+    _handleDeleteClass = event => {
+        event.preventDefault();
+        this
+            .props
+            .history
+            .push('/classes')
+
+    }
+
     render() {
         return (
 
@@ -30,8 +50,8 @@ export default class Classes extends React.Component {
                         variant="primary"
                         size="lg"
                         block
-                        onClick={this.handleSubmit}>
-                        1st Period
+                        onClick={this._handleSubmit}>
+                        1st Period Science
                     </Button>
 
                 </div>
@@ -40,9 +60,29 @@ export default class Classes extends React.Component {
                         variant="primary"
                         size="lg"
                         block
-                        onClick={this.handleSubmit}>
-                        2nd Period
+                        onClick={this._handleSubmit}>
+                        2nd Period Biology
                     </Button>
+                </div>
+                <div>
+                <ButtonToolbar className="AdditionalOptionButton">
+                            <Button
+                                variant="primary"
+                                size="lg"
+                                onClick={this
+                                    ._handleAddClass
+                                    .bind(this)}
+                                type="button">Add a class
+                            </Button>
+                            <Button
+                                variant="primary"
+                                size="lg"
+                                onClick={this
+                                    ._handleDeleteClass
+                                    .bind(this)}
+                                type="button">Delete a class
+                            </Button>
+                </ButtonToolbar> 
                 </div>
             </div>
 
