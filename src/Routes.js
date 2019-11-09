@@ -1,18 +1,20 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Home from "./Components/Home";
-import Quiz from "./Components/Quiz";
-import ClassAdmin from "./Components/ClassAdmin";
-import Classes from "./Components/Classes";
-import Quizzes from "./Components/Quizzes";
-import NotFound from "./Components/NotFound";
-import Students from "./Components/Students";
-import ClassTrends from "./Components/ClassTrends";
-import AppliedRoute from "./Components/AppliedRoute";
-import StudentLogin from "./Components/StudentLogin";
-import TeacherLogin from "./Components/InstructorLogin";
-import StudentTrends from "./Components/StudentTrends";
+import Home from "./Components/Pages/HomePage";
+import Quiz from "./Components/Pages/Quiz";
+import ClassAdmin from "./Components/Pages/ClassAdmin";
+import Classes from "./Components/Pages/Classes";
+import Quizzes from "./Components/Pages/Quizzes";
+import NotFound from "./Components/Pages/NotFound";
+import Students from "./Components/Pages/Students";
+import ClassTrends from "./Components/Pages/ClassTrends";
+import AppliedRoute from "./appliedRoute";
+import StudentLogin from "./Components/Pages/StudentLogin";
+import TeacherLogin from "./Components/Pages/InstructorLogin";
+import StudentTrends from "./Components/Pages/StudentTrends";
+import AddClass from "./Components/Pages/AddClass";
+
 
 export default ({ childProps }) => <Switch>
     <AppliedRoute path="/" exact component={Home} props={childProps} />
@@ -26,6 +28,7 @@ export default ({ childProps }) => <Switch>
     <AppliedRoute path="/classtrends" exact component={ClassTrends} props={childProps} />
     <AppliedRoute path="/studentlogin" exact component={StudentLogin} props={childProps} />
     <AppliedRoute path="/studenttrends" exact component={StudentTrends} props={childProps} />
+    <AppliedRoute path="/addclass" exact component={AddClass} props={childProps} />
     <Route component={NotFound} />
 </Switch>;
 

@@ -1,42 +1,38 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import "../Styles/Button.css";
+
+export default class Quiz extends React.Component {
 
 
-export default class Class extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-    }
-
-    _handleStudentSubmit = event => {
+    handleClassSubmit = event => {
+        console.log("handle submit");
         event.preventDefault();
         this
             .props
             .history
-            .push('/students')
+            .push('/classtrends')
 
     }
-    _handleClassSubmit = event => {
+    handleStudentSubmit = event => {
+        console.log("handle submit");
         event.preventDefault();
         this
             .props
             .history
-            .push('/quizzes')
+            .push('/studenttrends')
 
     }
     render() {
         return (
+            <div>
 
-            <div >
                 <div className="ReusableButton">
                     <Button
                         variant="primary"
                         size="lg"
                         block
-                        onClick={this._handleStudentSubmit}>
-                        Manage students
+                        onClick={this.handleClassSubmit}>
+                        See class results
                     </Button>
                 </div>
                 <div className="ReusableButton">
@@ -44,11 +40,12 @@ export default class Class extends React.Component {
                         variant="primary"
                         size="lg"
                         block
-                        onClick={this._handleClassSubmit}>
-                        Manage quizzes
+                        onClick={this.handleStudentSubmit}>
+                        See student results
                     </Button>
                 </div>
             </div>
+
         )
     }
 }

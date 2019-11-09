@@ -1,13 +1,9 @@
 import React from "react";
 import { Button, ButtonToolbar } from "react-bootstrap";
-import "../Styles/Button.css";
+import "../../Styles/Button.css";
 
 export default class Quizzes extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-    }
 
     handleQuizSubmit = event => {
         console.log("handle submit");

@@ -1,17 +1,15 @@
 import React, { Component } from "react";
 import { Button, ButtonToolbar, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import Home from "./Home";
+import Header from "../Elements/Header";
 
-import "../Styles/Login.css";
-export default class TeacherLogin extends Component {
+import "../../Styles/Login.css";
+export default class StudentLogin extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             email: "",
             password: "",
-            showStudentButton: true,
-            showTeacherButton: true
         };
     }
 
@@ -25,7 +23,7 @@ export default class TeacherLogin extends Component {
         });
     }
 
-    _handleLogin = event => {
+    handleLogin = event => {
         event.preventDefault();
         this
             .props
@@ -33,7 +31,7 @@ export default class TeacherLogin extends Component {
             .push('/classes')
 
     }
-    _handleSignUp = event => {
+    handleSignUp = event => {
         event.preventDefault();
         this
             .props
@@ -46,7 +44,7 @@ export default class TeacherLogin extends Component {
     render() {
         return (
             <div>
-                <Home />                
+                <Header />
                 <div className="LoginForm">
                     <form >
                         <FormGroup controlId="email" bsSize="large">
@@ -72,7 +70,7 @@ export default class TeacherLogin extends Component {
                                 variant="primary"
                                 size="lg"
                                 onClick={this
-                                    ._handleLogin
+                                    .handleLogin
                                     .bind(this)}
                                 type="button">Login
                             </Button>
@@ -80,11 +78,11 @@ export default class TeacherLogin extends Component {
                                 variant="primary"
                                 size="lg"
                                 onClick={this
-                                    ._handleSignUp
+                                    .handleSignUp
                                     .bind(this)}
                                 type="button">Sign Up
                             </Button>
-                        </ButtonToolbar>                   
+                        </ButtonToolbar>
                     </form>
                 </div>
             </div>
